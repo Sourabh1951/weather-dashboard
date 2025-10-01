@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Dynamic Weather Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <div class="search-section">
+            <input type="text" id="city-input" placeholder="Enter city name..." aria-label="City Name">
+            <button id="search-btn">Get Weather</button>
+            <button id="location-btn">Use Current Location</button>
+        </div>
+
+        <div id="current-weather" class="weather-card current-card hidden">
+            <h2><span id="location-name">City Name</span> <span id="temp-icon"></span></h2>
+            <div class="main-info">
+                <p class="temperature"><span id="current-temp">--</span>°C</p>
+                <p class="condition"><span id="current-condition">--</span></p>
+            </div>
+            <div class="details">
+                <p>Humidity: <span id="current-humidity">--</span>%</p>
+                <p>Wind Speed: <span id="current-wind">--</span> m/s</p>
+                <p>Sunrise: <span id="sunrise-time">--</span></p>
+                <p>Sunset: <span id="sunset-time">--</span></p>
+            </div>
+        </div>
+
+        <div class="forecast-section hidden">
+            <h3>5-Day Forecast </h3>
+            <div id="forecast-container" class="forecast-grid">
+                </div>
+        </div>
+
+        <div id="error-message" class="error-message hidden"></div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Dynamic Weather Dashboard</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+ 
